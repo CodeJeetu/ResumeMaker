@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+#div1{
+  margin:auto;
+  border-radius: 5px;
+  background-color: #c2f5d3;
+  padding: 20px;
+  height: auto;
+  width: 1000px;
+}
+table, th{
+    border: 2px solid black
+
+    }
+   
+    td{
+        font-size: 20px;
+        border: 1px solid ;
+        
+        padding: 4px 4px 4px 4px;
+    }
+    th{
+        font-size: 20px;
+    }
+    table{
+        width: 400px;
+        border-collapse: collapse;
+    }
+    #fnameout,#lnameout{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 60px;
+    }
+    #email,#mobile{
+        font-size: 30px;
+        font-family:'Courier New', Courier, monospace;
+    }
+    #address{
+        text-align:right;
+    }
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    label{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    p{
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    form{
+        margin-left: 20px;
+    }
+
+    #display_image{
+  
+ 
+  background-size: cover;
+  margin-left: 600px;
+  
+}
+#skils ,#lang{
+    font-size: 20px;
+
+}
+    </style>
+</head>
+<body>
+    <div id ="div1">\
+        
+        <form action="http://localhost/Resume%20Project/pdf.php"method="POST">
+
+        <label id="fnameout"name="fname">Jitendra </label>
+        <label id="lnameout"name="lname">Kushwaha</label><br>
+        <!-- <h2>Address</h2> -->
+        
+        <!-- <label id ="address" > Ward no. 1 Daniari Up 274409</label> -->
+        <label id="email"name ="email">email</label><br>
+        <label id="mobile"name="mobile">mobile</label>
+        <h2>Career Adjective:</h2>
+        <p>To work with organization being self profesioonal man</p>
+        <h2>Educational Qualification:</h2>
+        <table id="mytable">
+            <tr>
+                <th> Exams </th>
+                <th> Board/University </th>
+                <th>  Marks  </th>
+                <th> Year </th>
+            </tr>
+            <tr>
+                <td > High school </td>
+                <td id ="fbname"name="fbname">Up Board</td>
+                <td id ="fmark"name="fmark">82%</td>
+                <td id ="fyear"name="fyear">2016</td>
+            </tr>
+            <tr>
+                <td >Intermediate</td>
+                <td id ="sbname"name="sbname">Up Board</td>
+                <td id ="smark"name="smark">72%</td>
+                <td id ="syear"name="syear">2018</td>
+            </tr>
+            <tr>
+                <td id ="tcname"name="tcname">BCA</td>
+                <td id ="tbname"name="tbname">SVSU Meeruth</td>
+                <td id ="tmark"name="tmark">69%</td>
+                <td id ="tyear"name="tyear">2021</td>
+            </tr>
+        </table>
+        <h2>Skils:</h2>
+        <!-- <label id="skils">JavaPython</label> -->
+        <ul id="skils">
+        <li id ="skils1"name="skils1"></li>
+        <li id ="skils2"name="skils2"></li>
+        <li id ="skils3"name="skils3"></li>
+        </ul>
+        <h2>Hobbies:</h2>
+        <label id ="hobies"name="hobies">Playing Game & reading books</label>
+        <h2>Languages:</h2>
+        <!-- <label id ="language">English ,Hindi,Freanch</label> -->
+        <ul id="lang">
+            <li id ="language1"name="language1"></li>
+            <li id ="language2"name="language2"></li>
+            <!-- <li id ="language3"></li> -->
+            </ul>
+        <h2>Experiance:</h2>
+        <label id ="experiance"name="experiance"> 2 years with Ducat Noida</label>
+        <h2>Declearation:</h2>
+        <p>I hereby declare that the above information
+             is true to the best of my knowledge and belief.
+              I assure you sir/mam , if I am given a change , 
+              I will execute my work to the fullest satisfaction 
+              of my superior.</p>
+              <h2>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                &nbsp;&nbsp;&emsp;
+                &nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+                  Your Faithfully</h2> 
+            <h2>Date:__________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;
+            <!-- <br><button type="submit"name="submit">Submit </button> -->
+           
+              <div id ="display_image"></div></h2>
+               
+           </form>         
+    </div>
+                
+   
+    
+    <script>
+
+    document.getElementById("fnameout").innerHTML=localStorage.getItem("NAME");
+    document.getElementById("lnameout").innerHTML=localStorage.getItem("SURNAME");
+    document.getElementById('email').innerHTML = localStorage.getItem("EMAIL");
+    document.getElementById('mobile').innerHTML = localStorage.getItem("MOBILE")
+    document.getElementById('fbname').innerHTML = localStorage.getItem("SNAME")
+    document.getElementById('fmark').innerHTML = localStorage.getItem("MARKS1");
+    document.getElementById('fyear').innerHTML = localStorage.getItem("YEAR1");
+
+    document.getElementById('sbname').innerHTML = localStorage.getItem("SNAME2")
+    document.getElementById('smark').innerHTML = localStorage.getItem("MARKS2");
+    document.getElementById('syear').innerHTML = localStorage.getItem("YEAR2");
+
+    document.getElementById('tbname').innerHTML = localStorage.getItem("COLLNAME")
+    document.getElementById('tcname').innerHTML = localStorage.getItem("SNAME3")
+    document.getElementById('tmark').innerHTML = localStorage.getItem("MARKS3");
+    document.getElementById('tyear').innerHTML = localStorage.getItem("YEAR3");
+    
+    const collagename = document.getElementById('tbname').value;
+    if(collagename ==" ")
+    {
+        document.getElementById('mytable').deleteRow(2);
+    }
+
+
+    document.getElementById('skils1').innerHTML = localStorage.getItem("SKILS1");
+    document.getElementById('skils2').innerHTML = localStorage.getItem("SKILS2");
+    document.getElementById('skils3').innerHTML = localStorage.getItem("SKILS3");
+    document.getElementById('hobies').innerHTML = localStorage.getItem("HOBIES");
+    document.getElementById('language1').innerHTML = localStorage.getItem("LANGUAGE1");
+    document.getElementById('language2').innerHTML = localStorage.getItem("LANGUAGE2");
+    if(localStorage.getItem("EXPERIANCE")!= ""){
+    
+        document.getElementById('experiance').innerHTML = localStorage.getItem("EXPERIANCE");
+    
+    }else{
+        document.getElementById('experiance').innerHTML ="Still fresher";
+    }
+    const image_input = document.querySelector("#image_input");
+    var uploaded_image;
+
+    image_input.addEventListener('change', function() {
+  const reader = new FileReader();
+   reader.addEventListener('load', () => {
+    uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+        });
+    reader.readAsDataURL(this.files[0]);
+    });
+
+    </script> 
+    </body>
+   
+</body>
+</html>
