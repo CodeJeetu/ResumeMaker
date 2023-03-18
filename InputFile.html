@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input file</title>
+<style>
+#mark{
+    margin-left: 4px;
+}
+#form{
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    border: none;
+  /* border-bottom: 2px solid red; */
+    
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display:inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center; 
+}
+#submit{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 200%;
+  font-size: 20px;
+  background-color: rgb(18, 241, 18);
+  border-radius: 10px;
+  
+}
+#submit:hover{
+  background-color: #f0ea90;
+  direction:unset;
+  cursor: pointer;
+}
+
+input[type=submit]{
+    width: 100%;
+    padding: 12px 20px;
+
+   
+    border-radius: 4px;
+   
+}
+
+
+
+#div1{
+  margin:auto;
+  border-radius: 5px;
+  background-color: #f5f4e5;
+  padding: 20px;
+  height: auto;
+  width: 630px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-self:center;
+  
+    
+}
+#complete{
+  margin:auto;
+  align-self: center;
+  border-radius: 4px;
+  height: auto;
+  width: auto;
+  background-color: #c1b514;
+}
+#div2{
+   display:none;
+   
+}
+sup{
+    color: red;
+}
+#skils1{
+  width: 197px;
+}
+#skils2{
+  width: 200px;
+}
+#skils3{
+  width: 205px;
+}
+#language1{
+  width: 305px;
+}
+#language2{
+  width:300px;
+}
+
+
+</style>
+</head>
+<body>
+    <h1 style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;"> Insert Your Details</h1>
+    <div>
+    <div id="div1">
+<!-- <form action="ReadyResume.html" id ="form"> -->
+  <form action="ReadyResume.html"method="POST">
+    
+    First Name: <sup>*</sup><input type="text"id="fname"placeholder="Jitendra"name="fname">
+    Last Name:<sup>*</sup><input type="text"id="lname"placeholder="Kushwaha"name="lname">
+    Email<sup>*</sup><input type="text"id="email"placeholder="mrjitendra@gmail.com">
+     Mobile <sup>*</sup>: <input type="text"id="mobile"placeholder="8902837762">
+     Address<sup>*</sup>:<input type="text"id="address"placeholder="Location,State,Pincode">
+    High School <sup>*</sup> :<input type="text"id="sname"placeholder ="boardName">
+    marks <sup>*</sup>:<input type="text"id="marks1"placeholder="Eg.85">
+    Year <sup>*</sup>: <input type="text" id="year1">
+        
+    Intermediate <sup>*</sup>:<input type="text"placeholder ="Board name"id="sname2">
+    marks <sup>*</sup>:<input type="text"placeholder="Eg.85"id="marks2">
+    Year<sup>*</sup>: <input type ="text" id="year2">
+
+   <input type="radio" id="grad" name="grad" value="CSS"">
+   <label for="grad" id="grad1">Graduated</label><br>
+   
+   <script>
+     const radioButtons = document.querySelectorAll('input[id="grad"]');
+        for(const radioButton of radioButtons){
+            radioButton.addEventListener('change', showSelected);
+        }        
+        
+        function showSelected(e) {
+            console.log(e);
+            if (this.checked) {
+                document.querySelector('#div2').style.display="inline";
+                document.getElementById('grad').style.display="none";
+                document.getElementById('grad1').style.display="none";
+                
+               
+
+            }
+        }
+      
+</script>
+
+<div id ="div2">
+          
+        Graduation<sup>*</sup> :<input type="text"placeholder ="Course"id="sname3">
+        Collage Name<sup>*</sup> :<input type="text"placeholder ="University Name"id="collname">
+        marks<sup>*</sup>:<input type="text"placeholder="Eg.85"id="marks3">
+        Year<sup>*</sup>: <input type="text" id="year3">
+
+    </div><br>
+        
+            
+            Skils<sup>*</sup>:<br><input type="text"id="skils1"placeholder="Computer">
+           <input type="text"id="skils2"placeholder="Electric">
+           <input type="text"id="skils3"placeholder="Carpenter">
+            Hobies<sup>*</sup>:<input type="text"id="hobies"placeholder="Playing game, Reading book max[2]">
+            Languages<sup>*</sup>:<br><input type="text"id="language1"placeholder="English">
+            <input type="text"id="language2"placeholder="Hindi">
+            <!-- <input type="text"id="language3"placeholder="Franch"> -->
+            Experiance:<input type="text"id="experiance"placeholder="2 year with [Company Name]">
+           
+          <!-- <input type="button"onclick="info()"<a href="file:///E:/javascript%202021/ReadyResume.html" >Click</a>>   -->
+          <!-- <a href="ReadyResume.html"target="_blank"><input type="submit"onclick="Submitinfo()"name="submit"></a> -->
+          <!-- <a href="ReadyResume.html"target="_blank">click here</a> -->
+            <input type="submit" name="submit" id="submit"onclick="Submitinfo()">
+          
+       <!-- <script src="info.js"></script>      -->
+       
+      </form> 
+<!-- </form>  -->
+</div>  
+</div>
+
+<script>
+
+ function Submitinfo(){
+
+                const name = document.getElementById('fname').value;
+                const surname = document.getElementById('lname').value;
+                const email = document.getElementById('email').value;
+                const mobile = document.getElementById('mobile').value;
+                const address = document.getElementById('address').value;
+                const sname = document.getElementById('sname').value;
+                const marks1 = document.getElementById('marks1').value;
+                const year1 = document.getElementById('year1').value;
+                
+                
+
+                const sname2 = document.getElementById('sname2').value;
+                const marks2 = document.getElementById('marks2').value;
+                const year2 = document.getElementById('year2').value;
+
+                const sname3 = document.getElementById('sname3').value;
+                const marks3 = document.getElementById('marks3').value;
+                const year3 = document.getElementById('year3').value;
+                const collname = document.getElementById('collname').value;
+
+                const skils1 = document.getElementById('skils1').value;
+                const skils2 = document.getElementById('skils2').value;
+                const skils3 = document.getElementById('skils3').value;
+                const hobies = document.getElementById('hobies').value;
+                const languages1 = document.getElementById('language1').value;
+                const languages2 = document.getElementById('language2').value;
+                const experiance =document.getElementById('experiance').value;
+                // const languages3 = document.getElementById('language3').value;
+                
+
+                // to set into local storage
+                localStorage.setItem("NAME", name);
+                localStorage.setItem("SURNAME", surname);
+                localStorage.setItem("EMAIL",email);
+                localStorage.setItem("MOBILE",mobile);
+                //localStorage.setItem("ADDRESS",address);
+                localStorage.setItem("SNAME",sname);
+                localStorage.setItem("MARKS1",marks1);
+                localStorage.setItem("YEAR1",year1);
+                localStorage.setItem("SNAME2",sname2);
+                localStorage.setItem("MARKS2",marks2);
+                localStorage.setItem("YEAR2",year2);
+          
+                localStorage.setItem("SNAME3",sname3);
+                localStorage.setItem("MARKS3",marks3);
+                localStorage.setItem("YEAR3",year3);
+                localStorage.setItem("COLLNAME",collname);
+                
+
+                localStorage.setItem("SKILS1",skils1);
+                localStorage.setItem("SKILS2",skils2);
+                localStorage.setItem("SKILS3",skils3);
+                localStorage.setItem("HOBIES",hobies);
+                localStorage.setItem("LANGUAGE1",languages1);
+                localStorage.setItem("LANGUAGE2",languages2);
+                localStorage.setItem("EXPERIANCE",experiance);
+                // localStorage.setItem("LANGUAGE3",languages3);
+
+ }
+</script>  
+</body>
+</html>
